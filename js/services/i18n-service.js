@@ -9,12 +9,12 @@ const gTrans = {
     create: {
         en: 'Create new book:',
         es: 'Crear un nuevo libro:',
-        he: 'הוסף ספר:',
+        he: 'הוסף ספר :',
     },
     'book-name': {
-        en: 'Book Name:',
-        es: 'el nombre del libro:',
-        he: 'שם הספר:',
+        en: 'Book Name',
+        es: 'el nombre del libro',
+        he: 'שם הספר',
     },
     submit: {
         en: 'Submit',
