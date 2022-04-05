@@ -55,6 +55,16 @@ const gTrans = {
         en: 'Delete',
         es: 'Borrar',
         he: 'מחק'
+    },
+    rate: {
+        en: 'Rate',
+        es: 'Clasificación',
+        he: 'דירוג'
+    },
+    desc: {
+        en: 'Description:',
+        es: 'Descripción:',
+        he: 'תיאור:'
     }
 }
 

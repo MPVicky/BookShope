@@ -128,7 +128,10 @@ function onMovePage(isNext) {
 
 function onSetLang(lang) {
     setLang(lang)
-    if (lang === 'he') document.body.classList.add('rtl')
+    if (lang === 'he') {
+        document.body.classList.add('rtl')
+        document.querySelector('.modal').classList.add('rtl')
+    }
     else document.body.classList.remove('rtl')
     renderBooks()
     doTrans()

@@ -146,15 +146,23 @@ td img {
   margin: auto;
   transform: translate(-50%, -50%);
   top: 320px;
-  left: 50vw;
   width: 330px;
   height: 370px;
   border: 3px solid rgb(201, 180, 111);
-  display: none;
+  outline: 5px solid whitesmoke;
+  left: -150%;
+  text-align: start;
+}
+
+[data-trans="desc"] {
+  color: brown;
+  text-decoration: underline;
+  font-weight: 800;
 }
 
 .modal.open {
   display: initial;
+  left: 50vw;
 }
 
 .close-modal {
@@ -171,7 +179,7 @@ td img {
 .title,
 .price,
 .rate {
-  color: darkblue;
+  color: brown;
   font-size: 18px;
   font-weight: 700;
 }
