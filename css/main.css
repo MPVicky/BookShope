@@ -90,6 +90,8 @@ table button {
 
 .new-book button {
   height: 20px;
+  width: fit-content;
+  margin-inline-start: 9px;
 }
 
 table {
@@ -158,6 +160,7 @@ td img {
   color: brown;
   text-decoration: underline;
   font-weight: 800;
+  font-family: "Secular One";
 }
 
 .modal.open {
