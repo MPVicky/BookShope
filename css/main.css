@@ -20,6 +20,11 @@ body {
   margin: 0;
 }
 
+pre {
+  font-family: sans-serif;
+  font-weight: 600;
+}
+
 body.rtl {
   direction: rtl;
 }
@@ -140,11 +145,10 @@ td img {
   padding: 10px;
   margin: auto;
   transform: translate(-50%, -50%);
-  top: 270px;
+  top: 320px;
   left: 50vw;
-  width: 300px;
-  height: 350px;
-  text-align: left;
+  width: 330px;
+  height: 370px;
   border: 3px solid rgb(201, 180, 111);
   display: none;
 }
@@ -174,7 +178,7 @@ td img {
 
 .rating {
   position: absolute;
-  bottom: 3px;
+  bottom: -7px;
   left: 50%;
   transform: translate(-50%, -50%);
 }
