@@ -48,15 +48,16 @@ function onDeleteBook(bookId) {
     renderBooks()
 }
 
-function onAddBook(elValues, ev) {
+function onAddBook(ev) {
     ev.preventDefault()
     var title = ev.target[0].value
     var price = ev.target[1].value
+    ev.target[0].value = ''
+    ev.target[1].value = ''
+    if (!title || !price) return
     addBook(title, price)
     // renderBooks()
     onSetLang(getCurrLang())
-    ev.target[0].value = ''
-    ev.target[1].value = ''
 }
 
 function onUpdateClick(ev, bookId) {
