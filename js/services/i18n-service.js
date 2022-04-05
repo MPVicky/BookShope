@@ -93,3 +93,7 @@ function formatCurrency(num) {
     else currCurrency = 'USD'
     return new Intl.NumberFormat('he-IL', { style: 'currency', currency: currCurrency }).format(num)
 }
+
+function getCurrLang() {
+    return gCurrLang
+}

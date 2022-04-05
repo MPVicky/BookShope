@@ -53,7 +53,8 @@ function onAddBook(elValues, ev) {
     var title = ev.target[0].value
     var price = ev.target[1].value
     addBook(title, price)
-    renderBooks()
+    // renderBooks()
+    onSetLang(getCurrLang())
     ev.target[0].value = ''
     ev.target[1].value = ''
 }
@@ -117,6 +118,8 @@ function onSetSortBy(isTitle) {
 }
 
 function onMovePage(isNext) {
+    var currLang = getCurrLang()
+    if (currLang === 'he') isNext = !isNext
     movePage(isNext)
     getBooks()
     renderBooks()

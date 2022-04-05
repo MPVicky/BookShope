@@ -16,6 +16,8 @@ body {
   text-align: center;
   font-family: "Kaushan Script", "Secular One", cursive;
   padding: 30px;
+  height: 100vh;
+  margin: 0;
 }
 
 body.rtl {
