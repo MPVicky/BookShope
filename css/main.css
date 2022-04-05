@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+
+* {
+  user-select: none;
+}
+
+body {
+  background: linear-gradient(
+    to top left,
+    rgb(177, 165, 140),
+    rgb(226, 208, 170),
+    rgba(226, 208, 170, 0.13)
+  );
+  color: rgb(78, 40, 4);
+  text-align: center;
+  font-family: "Kaushan Script", cursive;
+  padding: 30px;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 32px;
+  margin-top: 10px;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: fit-content;
+  margin: auto;
+  margin-top: -60px;
+}
+
+.create-book {
+  margin-top: 50px;
+  text-align: left;
+  width: fit-content;
+  display: block;
+}
+
+.new-book,
+.book-name,
+.price {
+  display: inline-block;
+}
+
+.create-book h3 {
+  display: inline;
+  margin-right: 20px;
+  margin-bottom: 0;
+}
+
+.modal button,
+.create-book button,
+table button {
+  color: whitesmoke;
+  background-color: rgb(61, 35, 0);
+  border: none;
+  border-radius: 3px;
+  margin: 0;
+  width: 55px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.modal button,
+.create-book button,
+table button {
+  background-color: rgb(129, 88, 33);
+}
+
+.new-book button {
+  height: 20px;
+}
+
+table {
+  margin: auto;
+  border-collapse: collapse;
+  margin-top: 5px;
+  margin-bottom: -25px;
+}
+
+th,
+td {
+  text-transform: capitalize;
+  width: 200px;
+  border-bottom: 3px solid rgba(128, 128, 128, 0.123);
+}
+
+th {
+  height: 50px;
+  font-size: 20px;
+}
+
+td {
+  height: 100px;
+}
+
+td img {
+  max-width: 100px;
+  padding: 5px;
+}
+
+.sort-btn {
+  cursor: pointer;
+}
+
+.actions {
+  width: 85px;
+}
+.update-price {
+  color: rgb(39, 39, 39);
+  width: 60px;
+}
+
+.cancel {
+  background-color: gray;
+  color: black;
+  width: fit-content;
+  height: fit-content;
+}
+
+.modal {
+  position: absolute;
+  background-color: rgb(233, 212, 145);
+  padding: 10px;
+  margin: auto;
+  transform: translate(-50%, -50%);
+  top: 270px;
+  left: 50vw;
+  width: 300px;
+  height: 350px;
+  text-align: left;
+  border: 3px solid rgb(201, 180, 111);
+  display: none;
+}
+.modal.open {
+  display: block;
+}
+
+.close-modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  padding: 0;
+  background-color: rgb(201, 180, 111);
+}
+
+.title,
+.price,
+.rate {
+  color: darkblue;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.rating {
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.rating button {
+  width: 25px;
+  height: 25px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.page-nav-container {
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+}
+
+.current-page {
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: center;
+}
+
+.page-btn {
+  font-size: 10px;
+  width: 23px;
+  height: 18px;
+  background-color: rgb(201, 180, 111);
+  text-align: center;
+}
+
+.page-btn:hover {
+  background-color: rgb(173, 173, 173);
+}

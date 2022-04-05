@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Book Shop</title>
+  </head>
+
+  <body onload="onInit()">
+    <h1>Book Shop</h1>
+    <section class="create-book">
+      <h3>create new book:</h3>
+      <form class="new-book" onsubmit="onAddBook(this, event)">
+        <label for="book-name">Book name:</label>
+        <input type="text" name="book-name" />
+        <label for="price">Price:</label>
+        <input type="number" name="price" min="99" max="250" />
+        <button>Submit</button>
+      </form>
+    </section>
+
+    <aside class="modal">
+      <button onclick="onCloseModal()" class="close-modal">X</button>
+      <pre>
+Title: <span class="title"></span>
+
+Price: <span class="price"></span>
+
+Rate: <span class="rate"></span>
+
+Description:
+</pre>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum suscipit
+        rem non illo dolore reprehenderit quis quam veritatis animi ex,
+        assumenda sit voluptatem accusantium quibusdam aliquam atque soluta,
+        quae earum. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        In, id perferendis optio!
+      </p>
+      <div class="rating">
+        <button onclick="onChangeRate(false)">-</button>
+        <span class="ratePoints"></span>
+        <button onclick="onChangeRate(true)">+</button>
+      </div>
+    </aside>
+
+    <table>
+      <thead>
+        <th></th>
+        <th>id</th>
+        <th onclick="onSetSortBy(true)" class="sort-btn">title</th>
+        <th onclick="onSetSortBy(false)" class="sort-btn">price</th>
+        <th colspan="3" class="actions">actions</th>
+      </thead>
+      <tbody class="books-container">
+        <!-- <tr>
+          <td>
+            <img src="img/sapiens.PNG" alt="sapiens" />
+          </td>
+          <td>id</td>
+          <td>title</td>
+          <td>price</td>
+          <td>
+            <button class="book-id">read</button>
+          </td>
+          <td>
+            <form>
+              <button class="book-id">update</button>
+              <label hidden class="update-price">add new price</label>
+              <input
+                hidden
+                type="number"
+                class="update-price"
+                name="update-price"
+                min="99"
+                max="250"
+              />
+              <button hidden class="update-price cancel">X</button>
+            </form>
+          </td>
+          <td>
+            <button class="book-id">delete</button>
+          </td>
+        </tr> -->
+      </tbody>
+    </table>
+
+    <footer class="page-nav-container">
+      <button class="page-btn" onclick="onMovePage(false)">&lt;</button>
+      <div class="current-page">1</div>
+      <button class="page-btn" onclick="onMovePage(true)">></button>
+    </footer>
+
+    <script src="js/services/util.service.js"></script>
+    <script src="js/services/storage.service.js"></script>
+    <script src="js/services/book.service.js"></script>
+    <script src="js/book.controller.js"></script>
+  </body>
+</html>
