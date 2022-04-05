@@ -17,15 +17,15 @@ function renderBooks() {
     </td>
     <td>${book.id}</td>
     <td>${book.title}</td>
-    <td>${book.price}</td>
+    <td>${formatCurrency(book.price)}</td>
     <td class="actions">
-       <button onclick="onRead('${book.id}')" class="book-${book.id}">read</button>
+       <button onclick="onRead('${book.id}')" class="book-${book.id}" data-trans="read">read</button>
     </td>
     <td data-book="${book.id}" class="actions book-${book.id}">
-      <button onclick="onUpdateClick(event, this, '${book.id}')" class="book-${book.id}">update</button>
+      <button onclick="onUpdateClick(event, this, '${book.id}')" class="book-${book.id}" data-trans="update">update</button>
   </td>
    <td class="actions">
-       <button onclick="onDeleteBook('${book.id}')" class="book-${book.id}">delete</button>
+       <button onclick="onDeleteBook('${book.id}')" class="book-${book.id}" data-trans="delete">delete</button>
    </td>
    </tr>
     `)
@@ -58,7 +58,7 @@ function onAddBook(elValues, ev) {
     ev.target[1].value = ''
 }
 
-function onUpdateClick(ev, elBtn, bookId) {
+function onUpdateClick(ev, bookId) {
 
     ev.preventDefault()
     var strHtml = `<form>
@@ -102,7 +102,7 @@ function setModal(book, isOpen) {
     var elModal = document.querySelector('.modal')
     if (isOpen) {
         elModal.querySelector('.title').innerText = book.title
-        elModal.querySelector('.price').innerText = book.price
+        elModal.querySelector('.price').innerText = formatCurrency(book.price)
         elModal.querySelector('.rate').innerText = book.rate
         elModal.querySelector('.ratePoints').innerText = book.rate
         elModal.classList.add('open')
@@ -121,4 +121,12 @@ function onMovePage(isNext) {
     getBooks()
     renderBooks()
     document.querySelector('.current-page').innerText = getPageNumber()
+}
+
+function onSetLang(lang) {
+    setLang(lang)
+    if (lang === 'he') document.body.classList.add('rtl')
+    else document.body.classList.remove('rtl')
+    renderBooks()
+    doTrans()
 }

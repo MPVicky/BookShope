@@ -9,16 +9,23 @@
   </head>
 
   <body onload="onInit()">
-    <h1>Book Shop</h1>
+    <section class="header">
+      <h1 data-trans="h1-title">Book Shop</h1>
+      <select onchange="onSetLang(this.value)">
+        <option value="en">English</option>
+        <option value="he">עברית</option>
+        <option value="es">Spanish</option>
+      </select>
+    </section>
     <section class="main-content">
       <div class="create-book">
-        <h3>create new book:</h3>
+        <h3 data-trans="create">create new book:</h3>
         <form class="new-book" onsubmit="onAddBook(this, event)">
-          <label for="book-name">Book name:</label>
+          <label for="book-name" data-trans="book-name">Book name:</label>
           <input type="text" name="book-name" />
-          <label for="price">Price:</label>
+          <label for="price" data-trans="price">Price:</label>
           <input type="number" name="price" min="99" max="250" />
-          <button>Submit</button>
+          <button data-trans="submit">Submit</button>
         </form>
       </div>
 
@@ -50,10 +57,14 @@ Description:
       <table>
         <thead>
           <th></th>
-          <th>id</th>
-          <th onclick="onSetSortBy(true)" class="sort-btn">title</th>
-          <th onclick="onSetSortBy(false)" class="sort-btn">price</th>
-          <th colspan="3" class="actions">actions</th>
+          <th data-trans="id">id</th>
+          <th onclick="onSetSortBy(true)" class="sort-btn" data-trans="title">
+            title
+          </th>
+          <th onclick="onSetSortBy(false)" class="sort-btn" data-trans="price">
+            price
+          </th>
+          <th colspan="3" class="actions" data-trans="actions">actions</th>
         </thead>
         <tbody class="books-container">
           <!-- <tr>
@@ -97,6 +108,7 @@ Description:
 
     <script src="js/services/util.service.js"></script>
     <script src="js/services/storage.service.js"></script>
+    <script src="js/services/i18n-service.js"></script>
     <script src="js/services/book.service.js"></script>
     <script src="js/book.controller.js"></script>
   </body>
